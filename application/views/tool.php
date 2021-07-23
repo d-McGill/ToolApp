@@ -146,8 +146,8 @@
           <?php if ($row->status == 'active'){?>
             <form method="post" action=<?php echo site_url('Search/changeStat')?>>
               <input type="text" style="display:none;" value="<?php echo $row->toolId;?>" name="toolID">
-              <input type="text" style="display:none;" value="incetive" name="status">
-          <button type="submit" class="list-group-item list-group-item-warning">Mark As Incetive</button>
+              <input type="text" style="display:none;" value="inactive" name="status">
+          <button type="submit" class="list-group-item list-group-item-warning">Mark As inactive</button>
         </form>
       <?php } else{?>
         <form method="post" action=<?php echo site_url('Search/changeStat')?>>
