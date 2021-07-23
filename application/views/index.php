@@ -17,7 +17,6 @@
 	<body>
 				<main class="form-signin">
 						  <form method="post" action=<?php echo site_url('Welcome/verify')?>>
-							<img class="mb-4" src="<?php echo base_url();?>public/images/logo.png" alt="" width="300" height="75">
 							<h1 class="h3 mb-3 fw-normal">Tool Managment System</h1>
               <?php echo $this->session->flashdata('message')?>
 							<div class="form-floating">
