@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 		<meta name="generator" content="Hugo 0.83.1">
-		<title>Kcom Tool Man</title>
+		<title>TOOL APP</title>
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/custom.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/bootstrap-select.min.css">
