@@ -45,3 +45,9 @@ strong{
   border-radius: 8px;
   margin-top:-50px;
 }
+
+
+form-signin{
+  margin: 5% 20%;
+  padding:5%;
+}
