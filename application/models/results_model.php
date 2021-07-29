@@ -181,28 +181,36 @@ public function deleteTool(){
 
   public function insetTool(){
     $description = $this->input->post('description');
-    $asetNum = $this->input->post('aset');
+    $asetNum = $this->input->post('asetNum');
     $cat = $this->input->post('cat');
+    $status = $this->input->post('status');
+    $make = $this->input->post('make');
+    $model = $this->input->post('model');
     $serialNum = $this->input->post('serialNum');
     $teamIssued = $this->input->post('teamIssued');
     $dateIssued = $this->input->post('dateIssued');
+    $serviceDate = $this->input->post('serviceDate');
     $serviceItems = $this->input->post('serviceItems');
 
     $data = array(
 
         'description' => $description,
         'asetNum' => $asetNum,
+        'status' => $status,
         'cat' => $cat,
+        'make' => $make,
+        'model' => $model,
         'serialNum' => $serialNum,
         'teamIssued' => $teamIssued,
         'dateIssued' => $dateIssued,
+        'serviceDate' => $serviceDate,
         'serviceItems' => $serviceItems
        );
         // Inserting row into mediction table
         $this->db->insert('tools', $data);
   }
 
-  
+
 
 
 

@@ -27,6 +27,14 @@
               <td><?php echo $row->cat; ?></td>
             </tr>
             <tr>
+              <td>make</td>
+              <td><?php echo $row->make; ?></td>
+            </tr>
+            <tr>
+              <td>model</td>
+              <td><?php echo $row->model; ?></td>
+            </tr>
+            <tr>
               <td>Serial Number</td>
               <td><?php echo $row->serialNum;?></td>
             </tr>
@@ -147,18 +155,18 @@
             <form method="post" action=<?php echo site_url('Search/changeStat')?>>
               <input type="text" style="display:none;" value="<?php echo $row->toolId;?>" name="toolID">
               <input type="text" style="display:none;" value="inactive" name="status">
-          <button type="submit" class="list-group-item list-group-item-warning">Mark As inactive</button>
+          <button type="submit" class="list-group-item list-group-item-warning w-100">Mark As inactive</button>
         </form>
       <?php } else{?>
         <form method="post" action=<?php echo site_url('Search/changeStat')?>>
           <input type="text" style="display:none;" value="<?php echo $row->toolId;?>" name="toolID">
           <input type="text" style="display:none;" value="active" name="status">
-          <button type="submit" class="list-group-item list-group-item-success">Mark As Active</button>
+          <button type="submit" class="list-group-item list-group-item-success w-100">Mark As Active</button>
       </form>
     <?php }?>
     <form method="post" action=<?php echo site_url('Search/byeTool')?>>
       <input type="text" style="display:none;" value="<?php echo $row->toolId;?>" name="toolID">
-      <button type="submit" class="list-group-item list-group-item-danger" >Delete Tool</button>
+      <button type="submit" class="list-group-item list-group-item-danger w-100" >Delete Tool</button>
   </form>
         </div>
       </div>

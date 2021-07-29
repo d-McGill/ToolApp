@@ -67,7 +67,7 @@
     </div>
     <div class="col-sm">
       <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" name="serviceDate" required>
+        <input type="date" class="form-control" id="floatingInput" name="serviceDate" required>
         <label for="floatingInput">Service Date</label>
       </div>
     </div>
@@ -75,7 +75,7 @@
   <div class="row">
     <div class="col-sm">
       <div class="form-floating">
-        <input type="date" class="form-control" id="floatingInput" name="serviceItems" required>
+        <input type="text" class="form-control" id="floatingInput" name="serviceItems" required>
         <label for="floatingInput">serviceItems</label>
       </div>
     </div>

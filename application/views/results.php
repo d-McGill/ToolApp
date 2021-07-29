@@ -14,18 +14,18 @@ echo "<table class='table'>
     <th scope='col'>TeamIssued</th>
     <th scope='col'> Serial Number</th>
     <th scope='col'>Issued Date</th>
-    <th scope='col'>Service Date</th>
+    <th scope='col'>Status</th>
     <th scope='col'></th>
   </tr>
   <tr>
     <td>".$query->asetNum."</td>
     <td>".$query->teamIssued."</td>
     <td>".$query->serialNum."</td>
-    <td>".$query->dateIssued."</td>
     <td>".$query->serviceDate."</td>
+    <td>".$query->status."</td>
 
     <td>
-    <form method='post' action=".site_url('Search/toolView').">>
+    <form method='post' action=".site_url('Search/toolView').">
     <input name='toolid' value='$query->toolId' style='display:none;'></input><button type='submit' class='btn btn-primary btn-lg'>View</button></form>
     </td>
   </tr>
