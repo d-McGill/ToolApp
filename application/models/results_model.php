@@ -211,7 +211,12 @@ public function deleteTool(){
   }
 
 
-
+public function toolDates(){
+  $this->db->select('*');
+  $this->db->from('tools');
+  $query=$this->db->get();
+  return $query;
+}
 
 
 

@@ -4,6 +4,7 @@ class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('login_model');
+		$this->load->model('results_model');
 
 	}
 	public function index(){
@@ -11,6 +12,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function dash(){
+	$data['r']=$this->results_model->toolDates();
 	if($this->session->userdata('login')){
 		$data['main_view'] = 'dashboard';
 		$this->load->view('template', $data);
