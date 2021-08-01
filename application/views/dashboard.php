@@ -12,16 +12,14 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
         <?php
 
-/// CURRENT PROBLEM --------------------------------------
-        // add 3 days to date
-        $plus30=Date('y-m-d', strtotime('+30 days'));
-        echo $plus30;
-
+        if($r->result()==False){
+          echo 'No Upcoming Services';
+        }
+        else{
         foreach ($r->result() as $row) {
-          if($row->serviceDate<$plus30){
+
             echo $row->asetNum;
-          }}
-  /// CURRENT PROBLEM --------------------------------------
+          }};
 
           ?>
 
