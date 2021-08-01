@@ -212,9 +212,8 @@ public function deleteTool(){
 
 
 public function toolDates(){
-  $this->db->select('*');
-  $this->db->from('tools');
-  $query=$this->db->get();
+  $query = $this->db->query('SELECT * FROM tools
+  WHERE serviceDate BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW();');
   return $query;
 }
 
