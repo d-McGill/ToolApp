@@ -4,19 +4,22 @@
     echo 'no results';
   }else{
 
+    echo "<table class='table'>
+      <tr>
+        <th scope='col'>Aset Number</th>
+        <th scope='col'>TeamIssued</th>
+        <th scope='col'> Serial Number</th>
+        <th scope='col'>Issued Date</th>
+        <th scope='col'>Status</th>
+        <th scope='col'></th>
+      </tr>";
+
 
    foreach ($results as $a) {
 $query = $this->db->get_where('tools', array('toolId' => $a));
 $query = $query->row();
-echo "<table class='table'>
-  <tr>
-    <th scope='col'>Aset Number</th>
-    <th scope='col'>TeamIssued</th>
-    <th scope='col'> Serial Number</th>
-    <th scope='col'>Issued Date</th>
-    <th scope='col'>Status</th>
-    <th scope='col'></th>
-  </tr>
+echo "
+
   <tr>
     <td>".$query->asetNum."</td>
     <td>".$query->teamIssued."</td>
@@ -29,6 +32,13 @@ echo "<table class='table'>
     <input name='toolid' value='$query->toolId' style='display:none;'></input><button type='submit' class='btn btn-primary btn-lg'>View</button></form>
     </td>
   </tr>
-</table>
+
 ";
-} }?>
+}
+
+    echo "</table>";
+
+
+
+
+}?>
