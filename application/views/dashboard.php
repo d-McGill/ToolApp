@@ -13,7 +13,7 @@
         <?php
 
         if($r->result()==False){
-          echo 'No Upcoming Services';
+          echo 'No Upcoming ';
         }
         else{
         foreach ($r->result() as $row) {
