@@ -4,12 +4,12 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-header">
-        Featured
+        Upcoming Services
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
+        <h5 class="card-title">Services</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Services Details</a>
         <?php
 
         if($r->result()==False){
@@ -31,7 +31,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-header">
-        Featured
+        Parts
       </div>
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
