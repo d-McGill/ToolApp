@@ -8,8 +8,7 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">Services</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Services Details</a>
+        <p class="card-text">Within 30 days of the service date.</p>
         <?php
 
         if($r->result()==False){
@@ -18,9 +17,14 @@
         else{
         foreach ($r->result() as $row) {
 
-            echo $row->asetNum;
-          }};
 
+
+echo" <form method='post' action=".site_url('Search/toolView').">
+    <input name='toolid' value='$row->toolId' style='display:none;'></input><button type='submit' class='btn btn-primary btn-lg'>$row->asetNum</button></form>
+    </td>
+  </tr>
+
+";  }};
           ?>
 
 
