@@ -47,7 +47,19 @@ strong{
 }
 
 
+
+
+
+.buttonList:hover{
+color:#e56a04;
+}
+
 .form-signin{
   margin: 5% 20%;
   padding:5%;
+}
+
+.card-body {
+    height: 300px;
+    overflow: scroll;
 }

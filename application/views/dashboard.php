@@ -7,24 +7,34 @@
         Upcoming Services
       </div>
       <div class="card-body">
-        <h5 class="card-title">Services</h5>
-        <p class="card-text">Within 30 days of the service date.</p>
         <?php
 
         if($r->result()==False){
           echo 'No Upcoming ';
         }
         else{
+          echo"
+          <table class='table'>
+          <tr>
+            <th scope='col'>Aset Number</th>
+            <th scope='col'>Date</th>
+            <th scope='col'>Action</th>
+            </tr>";
         foreach ($r->result() as $row) {
+echo"
+<tr>
+  <td>$row->asetNum</td>
+  <td>$row->serviceDate</td>
+  <td>
+  <form method='post' action=".site_url('Search/toolView').">
+      <input name='toolid' value='$row->toolId' style='display:none;'></input><button type='submit' class='btn btn-primary btn-lg'>View</button></form>
+  </td>
+</tr>
+";  }
 
+echo "</table>";
 
-
-echo" <form method='post' action=".site_url('Search/toolView').">
-    <input name='toolid' value='$row->toolId' style='display:none;'></input><button type='submit' class='btn btn-primary btn-lg'>$row->asetNum</button></form>
-    </td>
-  </tr>
-
-";  }};
+};
           ?>
 
 
