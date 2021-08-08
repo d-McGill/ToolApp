@@ -4,7 +4,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-header">
-        Upcoming Services
+        Upcoming Services   <p class="date"><?php echo "Date: " . date("d-m-y") . "<br>";?></p>
       </div>
       <div class="card-body">
         <?php
@@ -17,7 +17,7 @@
           <table class='table'>
           <tr>
             <th scope='col'>Aset Number</th>
-            <th scope='col'>Date</th>
+            <th scope='col'>Service Date</th>
             <th scope='col'>Action</th>
             </tr>";
         foreach ($r->result() as $row) {
@@ -38,8 +38,9 @@ echo "</table>";
           ?>
 
 
-
       </div>
+
+      <a href="#" class="link ">View All</a>
     </div>
   </div>
   <div class="col-sm-6">

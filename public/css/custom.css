@@ -46,8 +46,12 @@ strong{
   margin-top:-50px;
 }
 
-
-
+.date{
+  text-align: right;
+  font-weight:bold;
+  display: inline-block;
+  float: right;
+}
 
 
 .buttonList:hover{
@@ -62,4 +66,9 @@ color:#e56a04;
 .card-body {
     height: 300px;
     overflow: scroll;
+}
+
+.link{
+  margin:3%;
+  text-align: center;
 }

@@ -34,6 +34,17 @@ CREATE TABLE tools (
   FOREIGN KEY (manId) REFERENCES manDetail(manId)
 );
 
+CREATE TABLE parts(
+  partId int(11) PRIMARY KEY AUTO_INCREMENT,
+  toolId int(11),
+  FOREIGN KEY ( toolId) REFERENCES tools(toolId),
+  name varchar(255),
+  price (11)
+);
+
+
+INSERT INTO `parts` (`partID`, `name`, `price`)
+VALUES (1, 'filter', 20.99 );
 
 
 INSERT INTO `users` (`GUID`, `email`, `password`,`firstname`, `surname`)
