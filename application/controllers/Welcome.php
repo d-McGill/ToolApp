@@ -47,4 +47,14 @@ class Welcome extends CI_Controller {
 		redirect('');
 	}
 
+
+
+function services(){
+	$data['r']=$this->results_model->toolDates();
+	$data['main_view'] = 'services';
+	$this->load->view('template', $data);
+}
+
+
+
 }

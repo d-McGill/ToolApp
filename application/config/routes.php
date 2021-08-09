@@ -54,5 +54,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] = 'welcome/dash';
+$route['services'] = 'welcome/services';
 $route['toolinfo'] = 'search/toolView';
 $route['addtool'] = 'search/addToolView';
