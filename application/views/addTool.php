@@ -104,10 +104,6 @@
           <option value="fantasy">Fantasy</option>
         </select>
       </div>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" name="serviceItems" required>
-        <label for="floatingInput">serviceItems</label>
-      </div>
     </div>
     <div class="col-sm">
       <button class="w-80 btn btn-lg btn-primary" type="submit">Add</button>

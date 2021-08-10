@@ -203,21 +203,20 @@ public function deleteTool(){
         'serialNum' => $serialNum,
         'teamIssued' => $teamIssued,
         'dateIssued' => $dateIssued,
-        'serviceDate' => $serviceDate,
-        'serviceItems' => $serviceItems
+        'serviceDate' => $serviceDate
        );
+
+// BROKEN _
+  $this->db->select('*');
+  $this->db->from('tools');
+  $this->db->where('asetNum',$this->input->post('asetNum'));
+  $query=$this->db->get();
+
+
+
+
         // Inserting row into mediction table
         $this->db->insert('tools', $data);
-// BROKEN _--------------------------------------
-        $this->db->select('toolid');
-        $this->db->from('tools');
-        $this->db->where('asetNum',$asetNum);
-        $query=$this->db->get();
-
-        $this->db->set('toolId', $query);
-        $this->db->where('toolId', $toolId);
-        $this->db->update('parts');
-
 
         $genres = array();
 
@@ -226,7 +225,7 @@ public function deleteTool(){
 
               $data = array(
                 'toolId' => $qurey,
-                  'name' => $temp
+                'name' => $temp
 
                  );
 
