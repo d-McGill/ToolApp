@@ -208,7 +208,7 @@ public function deleteTool(){
        );
         // Inserting row into mediction table
         $this->db->insert('tools', $data);
-
+// BROKEN _--------------------------------------
         $this->db->select('toolid');
         $this->db->from('tools');
         $this->db->where('asetNum',$asetNum);
@@ -236,7 +236,7 @@ public function deleteTool(){
 
 
 
-
+// broken ---------------------------------
   }
 
 
