@@ -208,6 +208,35 @@ public function deleteTool(){
        );
         // Inserting row into mediction table
         $this->db->insert('tools', $data);
+
+        $this->db->select('toolid');
+        $this->db->from('tools');
+        $this->db->where('asetNum',$asetNum);
+        $query=$this->db->get();
+
+        $this->db->set('toolId', $query);
+        $this->db->where('toolId', $toolId);
+        $this->db->update('parts');
+
+
+        $genres = array();
+
+        //for each searches each genre into the database and finds the genre id
+            foreach ($this->input->post('serviceItems') as $temp) {
+
+              $data = array(
+                'toolId' => $qurey,
+                  'name' => $temp
+
+                 );
+
+                  $this->db->insert('parts', $data);
+
+                }
+
+
+
+
   }
 
 

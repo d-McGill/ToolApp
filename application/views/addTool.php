@@ -86,6 +86,24 @@
   </div>
   <div class="row">
     <div class="col-sm">
+      <div class="input-group">
+        <label>Genre</label>
+        <select class="selectpicker" name="serviceItems[]" multiple required>
+          <option value="comedy">Comedy</option>
+          <option value="sci-fi">Sci-fi</option>
+          <option value="romance">Romance</option>
+          <option value="action">Action</option>
+          <option value="thriller">Thriller</option>
+          <option value="drama">Drama</option>
+          <option value="mystery">Mystery</option>
+          <option value="crime">Crime</option>
+          <option value="drama">Drama</option>
+          <option value="mystery">Mystery</option>
+          <option value="animation">Animation</option>
+          <option value="adventure">Adventure</option>
+          <option value="fantasy">Fantasy</option>
+        </select>
+      </div>
       <div class="form-floating">
         <input type="text" class="form-control" id="floatingInput" name="serviceItems" required>
         <label for="floatingInput">serviceItems</label>
