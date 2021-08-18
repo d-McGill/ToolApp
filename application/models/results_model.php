@@ -192,6 +192,9 @@ public function deleteTool(){
     $serviceDate = $this->input->post('serviceDate');
     $serviceItems = $this->input->post('serviceItems');
 
+
+
+
     $data = array(
 
         'description' => $description,
@@ -206,17 +209,21 @@ public function deleteTool(){
         'serviceDate' => $serviceDate
        );
 
-// BROKEN _
-  $this->db->select('*');
-  $this->db->from('tools');
-  $this->db->where('asetNum',$this->input->post('asetNum'));
-  $query=$this->db->get();
+
+       // Inserting row into mediction table
+       $this->db->insert('tools', $data);
+
+
+       $this->db->select('toolId');
+       $this->db->from('tools');
+       $this->db->where('asetNum',$this->input->post('asetNum'));
+       $query=$this->db->get();
+       $ret = $query->row();
 
 
 
 
-        // Inserting row into mediction table
-        $this->db->insert('tools', $data);
+
 
         $genres = array();
 
@@ -224,7 +231,7 @@ public function deleteTool(){
             foreach ($this->input->post('serviceItems') as $temp) {
 
               $data = array(
-                'toolId' => $qurey,
+                'toolId' => $ret->toolId,
                 'name' => $temp
 
                  );
@@ -234,8 +241,6 @@ public function deleteTool(){
                 }
 
 
-
-// broken ---------------------------------
   }
 
 
@@ -244,6 +249,7 @@ public function toolDates(){
   WHERE serviceDate BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW();');
   return $query;
 }
+
 
 
 
